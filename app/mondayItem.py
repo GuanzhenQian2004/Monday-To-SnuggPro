@@ -1,5 +1,6 @@
 import requests
 import json
+from .location import Location
 
 class MondayItem:
 
@@ -77,7 +78,8 @@ class MondayItem:
         coordinate = (json.loads(self.data.get("Location")).get("lat"), json.loads(self.data.get("Location")).get("lng"))
         address1, city, state = us_address_formatter(full_address) 
         
-        zip_code = 22903       
+        location = Location(coordinate[0], coordinate[1])
+        zip_code = location.get_zipcode()
 
         return {
             "firstName": first_name,

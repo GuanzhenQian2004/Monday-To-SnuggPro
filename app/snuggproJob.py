@@ -26,8 +26,8 @@ class SnuggProJob:
         self.zipCode = zipCode
 
         self.public_key = config.SNUGGPRO_PUBLIC_KEY
-        private_key = config.SNUGGPRO_PRIVATE_KEY
-        base_url = "https://api.snuggpro.com"
+        self.private_key = config.SNUGGPRO_PRIVATE_KEY
+        self.base_url = "https://api.snuggpro.com"
 
     def get_payload(self):
         return {
@@ -77,7 +77,7 @@ class SnuggProJob:
 
         # Endpoint to create a job
         url = f"{self.base_url}/jobs"
-
+        
         # Send POST request to create the job
         response = requests.post(url, headers=headers, data=formatted_payload)
 
