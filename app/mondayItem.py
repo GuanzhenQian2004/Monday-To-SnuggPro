@@ -1,6 +1,6 @@
 import requests
 import json
-from .location import Location
+from location import Location
 
 class MondayItem:
 

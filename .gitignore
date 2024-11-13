@@ -1,6 +1,3 @@
-# My tests
-tests/
-
 # Ngrok for local development
 ngrok.exe
 

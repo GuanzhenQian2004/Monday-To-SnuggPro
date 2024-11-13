@@ -1,7 +1,7 @@
 from flask import Flask, request, jsonify
 import config
-from .mondayItem import MondayItem
-from .snuggproJob import SnuggProJob
+from mondayItem import MondayItem
+from snuggproJob import SnuggProJob
 
 # Initialize the Flask app
 app = Flask(__name__)
