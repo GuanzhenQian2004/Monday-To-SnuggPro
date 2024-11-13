@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+.git
+.venv
+.DS_Store
+tests/
+ngrok.exe
