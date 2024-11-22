@@ -4,7 +4,7 @@ class Location:
     def __init__(self, latitude, longitude):
         self.latitude = latitude
         self.longitude = longitude
-        self.geolocator = Nominatim(user_agent="geoapiExercises")
+        self.geolocator = Nominatim(user_agent="geocoding_for_snuggpro_input (contact: https://github.com/GuanzhenQian2004)") # Change this to unique identifier
 
     def get_zipcode(self):
         try:
