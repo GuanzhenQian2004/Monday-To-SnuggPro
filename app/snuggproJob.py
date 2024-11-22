@@ -8,13 +8,14 @@ class SnuggProJob:
 
     def __init__(self, firstName, lastName, email, homePhone, address1, city, state, zipCode, 
                  jobType=1, accountId=8780, companyId=2811, programId=7, 
-                 fromTemplateId=248196, stageId=2):
+                 fromTemplateId=248196, stageId=2, useStrictBpi2400Calibration=1):
         self.jobType = jobType  # Type is Audit
         self.accountId = accountId  # For Steven Qian
         self.companyId = companyId  # For Local Energy Alliance Program
         self.programId = programId  # For LEAP
         self.fromTemplateId = fromTemplateId
         self.stageId = stageId  # Audit
+        self.useStrictBpi2400Calibration = useStrictBpi2400Calibration # 1 for yes and 0 for no
 
         self.firstName = firstName
         self.lastName = lastName
@@ -37,6 +38,7 @@ class SnuggProJob:
             "programId": self.programId,
             "fromTemplateId": self.fromTemplateId,
             "stageId": self.stageId,
+            "useStrictBpi2400Calibration": self. ,
             "firstName": self.firstName,
             "lastName": self.lastName,
             "email": self.email,
