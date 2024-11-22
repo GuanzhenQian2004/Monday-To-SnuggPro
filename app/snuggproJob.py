@@ -7,7 +7,7 @@ import config
 class SnuggProJob:
 
     def __init__(self, firstName, lastName, email, homePhone, address1, city, state, zipCode, 
-                 jobType=1, accountId=12056, companyId=2811, programId=7, 
+                 jobType=1, accountId=8780, companyId=2811, programId=7, 
                  fromTemplateId=248196, stageId=2):
         self.jobType = jobType  # Type is Audit
         self.accountId = accountId  # For Steven Qian
