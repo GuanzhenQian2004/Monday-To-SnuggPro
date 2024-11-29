@@ -38,7 +38,7 @@ class SnuggProJob:
             "programId": self.programId,
             "fromTemplateId": self.fromTemplateId,
             "stageId": self.stageId,
-            "useStrictBpi2400Calibration": self. ,
+            "useStrictBpi2400Calibration": self.useStrictBpi2400Calibration,
             "firstName": self.firstName,
             "lastName": self.lastName,
             "email": self.email,
@@ -88,3 +88,5 @@ class SnuggProJob:
             print("Job created successfully:", response.json())
         else:
             print("Failed to create job:", response.status_code, response.text)
+        
+        return response
