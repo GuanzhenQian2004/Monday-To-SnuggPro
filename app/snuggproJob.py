@@ -2,7 +2,7 @@ import requests
 import hmac
 import hashlib
 from datetime import datetime
-from . import config
+import config
 
 class SnuggProJob:
 
