@@ -8,6 +8,7 @@ from app.snuggproJob import SnuggProJob
 def test_create_snuggpro_job():
     # Initialize the SnuggProJob instance with test data
     job = SnuggProJob(
+        # Required
         firstName="Test",
         lastName="User",
         email="test.user@example.com",
@@ -16,6 +17,15 @@ def test_create_snuggpro_job():
         city="Testville",
         state="TS",
         zipCode="12345"
+
+        # Optional
+        #jobType=1,
+        #accountId=8780,
+        #companyId=2811,
+        #programId=7,
+        #fromTemplateId=248196,
+        #stageId=2,
+        #useStrictBpi2400Calibration=1
     )
 
     # Call the method to create the job
