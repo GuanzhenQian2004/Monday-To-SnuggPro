@@ -1,7 +1,7 @@
 from flask import Flask, request, jsonify
-import config
-from mondayItem import MondayItem
-from snuggproJob import SnuggProJob
+from . import config
+from .mondayItem import MondayItem
+from .snuggproJob import SnuggProJob
 
 # Initialize the Flask app
 app = Flask(__name__)
@@ -11,7 +11,7 @@ app = Flask(__name__)
 def handle_webhook():
     
     data = request.get_json()
-    # Debug: Print received data from webhook
+    # Debug: Print received data from webhooks
     print("\nRecieved Data From Webhook:\n", data, "\n")
 
     # Initial webhook verification setup

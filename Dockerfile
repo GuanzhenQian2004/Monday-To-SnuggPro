@@ -18,4 +18,4 @@ ENV PORT=8080
 ENV PYTHONUNBUFFERED=1
 
 # Run the application
-CMD ["python", "app/app.py"]
+CMD ["python", "-m", "app.app"]
