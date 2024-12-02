@@ -1,3 +1,4 @@
+import logging
 import requests
 import hmac
 import hashlib
@@ -85,8 +86,8 @@ class SnuggProJob:
 
         # Check response
         if response.status_code == 200:
-            print("Job created successfully:", response.json())
+            logging.debug("Snuggpro Response: %s", response)
         else:
-            print("Failed to create job:", response.status_code, response.text)
+            logging.error("Failed to create job, Status Code: %s, Reponse: %s", response.status_code, response.text)
         
         return response

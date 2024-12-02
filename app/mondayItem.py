@@ -1,3 +1,4 @@
+import logging
 import requests
 import json
 from .location import Location
@@ -51,8 +52,9 @@ class MondayItem:
                     for column_value in column_values if column_value.get('column', {}).get('title')}
             return result
         else:
-            return {"error": f"Failed to fetch item, status code: {response.status_code}"}  # change later
-
+            logging.error("Failed to fetch item. Status code: %s, Response: %s", response.status_code, response.text)
+            raise ValueError("Failed to fetch item from Monday.com")
+        
     def get_data(self):
         return self.data
 
