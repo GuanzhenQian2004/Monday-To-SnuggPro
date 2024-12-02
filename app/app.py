@@ -7,7 +7,22 @@ from .snuggproJob import SnuggProJob
 # Initialize the Flask app
 app = Flask(__name__)
 
-# Define the route to handle incoming webhooks from Monday.com
+@app.route('/')
+def homepage():
+    return """
+    <html>
+        <head>
+            <title>My Webhook App</title>
+        </head>
+        <body>
+            <h1>Welcome to My Webhook App</h1>
+            <p>Check out the source code for this project on GitHub:</p>
+            <a href="https://github.com/GuanzhenQian2004/Monday-To-SnuggPro" target="_blank">GitHub Repository</a>
+        </body>
+    </html>
+    """
+
+# Webhook Page Route
 @app.route('/webhook', methods=['POST'])
 def handle_webhook():
     
@@ -71,7 +86,7 @@ def handle_webhook():
     # Respond to acknowledge
     return jsonify({"status": "Webhook received"}), 200
 
-# Run the Flask app on a specified port
+# Run the Flask apps
 if __name__ == '__main__':
     # Configure logging
     logging.basicConfig(format='%(asctime)s - %(levelname)s - %(message)s')
